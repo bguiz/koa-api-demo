@@ -98,14 +98,14 @@
       this is where `babel` and `isparta` come into play
     - View the code coverage report
       - There will be an overview report output to the terminal:
-```bash
-    =============================== Coverage summary ===============================
-    Statements   : 100% ( 18/18 )
-    Branches     : 100% ( 3/3 )
-    Functions    : 100% ( 2/2 )
-    Lines        : 100% ( 14/14 )
-    ================================================================================
-```
+          ```bash
+          =============================== Coverage summary ===============================
+          Statements   : 100% ( 18/18 )
+          Branches     : 100% ( 3/3 )
+          Functions    : 100% ( 2/2 )
+          Lines        : 100% ( 14/14 )
+          ================================================================================
+          ```
       - There will also be a JSON and LCOV reports,
         which is useful to export to external tools,
         such as a continuous integration/ deployment tool
@@ -128,23 +128,23 @@
   - Reduce the code coverage (intentionally) to see it action
     - Edit `lib/server.js`
       - Insert some redundant code into `getHelloWorld()`:
-```javascript
-if (false) {
-  (function() {
-    console.log('This statement never gets reached');
-  })();
-}
-```
+          ```javascript
+          if (false) {
+            (function() {
+              console.log('This statement never gets reached');
+            })();
+          }
+          ```
       - Now run the `cover` task again, and observe that our
         all-round 100 percent code coverage drop drop to 80-ish percent:
-```bash
-=============================== Coverage summary ===============================
-Statements   : 90.48% ( 19/21 )
-Branches     : 80% ( 4/5 )
-Functions    : 66.67% ( 2/3 )
-Lines        : 88.24% ( 15/17 )
-================================================================================
-```
+          ```bash
+          =============================== Coverage summary ===============================
+          Statements   : 90.48% ( 19/21 )
+          Branches     : 80% ( 4/5 )
+          Functions    : 66.67% ( 2/3 )
+          Lines        : 88.24% ( 15/17 )
+          ================================================================================
+          ```
       - Undo the edit to `lib/server.js` to remove the redundant code,
         and run the `cover` task again;
         and observe that we restore our code coverage to an all-round 100 percent again.
