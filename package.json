@@ -1,0 +1,53 @@
+{
+  "name": "koa-api-demo",
+  "version": "0.0.0",
+  "description": "Demo of a RESTful JSON API created using Koa",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./lib/server.js",
+    "lint": "./node_modules/.bin/eslint lib",
+    "test": "node --harmony ./node_modules/mocha/bin/_mocha -u bdd -R spec",
+    "cover": "./node_modules/.bin/babel-node ./node_modules/.bin/isparta cover ./node_modules/mocha/bin/_mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bguiz/koa-api-demo.git"
+  },
+  "keywords": [
+    "demo",
+    "koa",
+    "REST",
+    "API"
+  ],
+  "author": "bguiz",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bguiz/koa-api-demo/issues"
+  },
+  "homepage": "https://github.com/bguiz/koa-api-demo#readme",
+  "engines": {
+    "node": ">= 3.0.0"
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-body": "^3.1.0",
+    "co-monk": "^1.0.0",
+    "koa": "^0.21.0",
+    "koa-router": "^5.1.2",
+    "lodash.defaults": "^3.1.2",
+    "lodash.omit": "^3.1.0",
+    "mongodb": "^1.4.39",
+    "monk": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babel-eslint": "^4.0.7",
+    "chai": "^3.2.0",
+    "eslint": "^1.1.0",
+    "isparta": "^3.0.3",
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5",
+    "supertest": "^1.0.1",
+    "supertest-as-promised": "^2.0.2"
+  }
+}
