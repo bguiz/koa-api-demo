@@ -2,7 +2,7 @@
 
 ## Steps
 
-- [x] Initialise - [tag](/bguiz/koa-api-demo/tree/v0.0.1)
+- [x] Initialise - [tag](/tree/v0.0.1)
   - Create `package.json` using `npm init`
   - `npm install --save` dependencies needed by the server
   - `npm install --save-dev` dependencies used in development and testing
