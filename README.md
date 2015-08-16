@@ -36,12 +36,12 @@
       - Tests will fail, of course, because we have not written
         any code on the server for this endpoint!
           - ```bash
-            Error: expected { hello: 'world!' } response body, got {}
-            + expected - actual
+              Error: expected { hello: 'world!' } response body, got {}
+              + expected - actual
 
-            -{}
-            +{
-            +  "hello": "world!"
-            +}
+              -{}
+              +{
+              +  "hello": "world!"
+              +}
             ```
       - We are writing tests first, and then doing the implementation next
