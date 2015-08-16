@@ -35,7 +35,8 @@
         - `node --harmony ./node_modules/mocha/bin/_mocha -u bdd -R spec`
       - Tests will fail, of course, because we have not written
         any code on the server for this endpoint!
-          - ```bash
+          - Output:
+            ```bash
               Error: expected { hello: 'world!' } response body, got {}
               + expected - actual
 
