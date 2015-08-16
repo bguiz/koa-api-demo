@@ -58,3 +58,32 @@
   - Congratulations, we now have a HTTP server!
     - that serves JSON responses
     - uses generator functions
+- [x] Lint -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.4)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.3...v0.0.4)
+  - Run `eslint` from the command line using `npm run lint`
+    - Executes `packageJson.scripts.lint`
+      - `./node_modules/.bin/eslint lib`
+      - Uses configuration in `.eslintrc`
+        - Take a look at this files contents
+        - Configure it to your liking
+          - [How to configure `eslint`](http://eslint.org/docs/user-guide/configuring.html)
+          - [The available `eslint` rules](http://eslint.org/docs/rules/)
+      - The lint task should exit with no errors
+    - Edit `lib/server.js` and remove a semicolon at random
+      - Run the lint task again, notice that a test failure occurs:
+        ```bash
+          lib/server.js
+            4:19  error  Missing semicolon  semi
+
+          ✖ 1 problem (1 error, 0 warnings)
+        ```
+      - Undo the edit, replacing the lost semicolon
+      - Run the lint task yet again, and we are back to no errors
+  - Be sure to run the lint task every now and then on your code
+    - Ensures that your code style is consistent
+      across different parts of your code
+    - This is doubly important across any project that is
+      large, complex, or involves more than one developer
+    - A good way to nip nasty bugs in the bud
+      (i.e. before they even become bugs)
