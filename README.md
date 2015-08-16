@@ -116,15 +116,15 @@
         - `firefox coverage/lcov-report/lib/server.js.html`
   - Code coverage essentially works by doing three things in sequence
     1. **Instrument** the code
-       (place little markers in every line of code, statement, function, and branch)
+      (place little markers in every line of code, statement, function, and branch)
     2. **Execute tests** using the test runner, in this case `mocha`
-       (same one we have used in `npm run test`)
+      (same one we have used in `npm run test`)
     3. **Build the report** as the tests execute,
-       the little markers placed in the code during instrumentation
-       track which bit have of code have been executed (and how often).
-       From this, the code coverage tool can deduce
-       which parts **have**, and have **not** been executed,
-       and a report is created
+      the little markers placed in the code during instrumentation
+      track which bit have of code have been executed (and how often).
+      From this, the code coverage tool can deduce
+      which parts **have**, and have **not** been executed,
+      and a report is created
   - Reduce the code coverage (intentionally) to see it action
     - Edit `lib/server.js`
       - Insert some redundant code into `getHelloWorld()`:
