@@ -165,4 +165,16 @@
           in order to more thoroughly test your code
     - Aim for a code coverage of as close to 100 percent as is reasonably possible
       (as projects get larger, and more complex, 100 percent is extremely hard to achieve)
-- [ ] Document
+- [x] Document -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.6)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.5...v0.0.6)
+  - Use `yuidocjs` to generate documentation
+  - Install packages: `npm install --save-dev yuidocjs yuidoc-lucid-theme`
+  - Create a config file `yuidoc.json`
+    - Tells it to output to a folder named `docuemntation/`
+    - Also tells it to ignore certain folders when generating documentation (e.g. `node_modules`)
+  - Edit `lib/server.js` to add documentation comments
+  - Run the document task:
+    `npm run document`
+  - Open generated documentation in your browser
+    `firefox documentation/index.html`
