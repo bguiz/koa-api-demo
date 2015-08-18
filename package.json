@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node ./lib/server.js",
     "lint": "./node_modules/.bin/eslint lib",
+    "document": "node ./node_modules/yuidocjs/lib/cli .",
     "test": "node --harmony ./node_modules/mocha/bin/_mocha -u bdd -R spec",
     "cover": "./node_modules/.bin/babel-node ./node_modules/.bin/isparta cover ./node_modules/mocha/bin/_mocha"
   },
@@ -48,6 +49,8 @@
     "istanbul": "^0.3.17",
     "mocha": "^2.2.5",
     "supertest": "^1.0.1",
-    "supertest-as-promised": "^2.0.2"
+    "supertest-as-promised": "^2.0.2",
+    "yuidoc-lucid-theme": "^0.1.1",
+    "yuidocjs": "^0.8.1"
   }
 }
