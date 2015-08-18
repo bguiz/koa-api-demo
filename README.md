@@ -165,3 +165,4 @@
           in order to more thoroughly test your code
     - Aim for a code coverage of as close to 100 percent as is reasonably possible
       (as projects get larger, and more complex, 100 percent is extremely hard to achieve)
+- [ ] Document
