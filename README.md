@@ -178,7 +178,9 @@
     `npm run document`
   - Open generated documentation in your browser
     `firefox documentation/index.html`
-- [x] Development
+- [x] Development -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.7)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.6...v0.0.7)
   - [x] Command line
     - Open your terminal, get comfortable with issuing commands on it
     - You will need to be comfortable with issuing `npm` and `git` commands in the terminal
