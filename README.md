@@ -237,3 +237,21 @@
       - already in most browsers, but has not yet achieved widespread adoption
       - Different from HTTP/1 in several fundamental ways
       - We will be focussing on HTTP/1 for this course
+- [x] Recap: Hello World -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.8)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.7...v0.0.8)
+  - We started off head first, demonstrating:
+    - Setting up a NodeJs project
+    - Installed dependencies for the NodeJs project
+    - Used a generator function as a Koa middleware
+      (but have not made use of yield yet)
+    - Wrote and run integration tests using `supertest` and `mocha`
+    - Wrote and run code coverage using `istanbul`, `isparta`, and `babel`
+    - Wrote documentation in-line with ourcode,
+      and used `yuidocjs` to generate a documentation website
+  - After that, we took a step back
+    - Familiarised ourselves with the command line interfaces,
+      with a focus on those of `npm` and `git`
+    - Learnt about how NodeJs, `npm`, and `nvm` are used
+    - Familiarised ourselves with Sublime Text as a text editor
+    - Brushed up on the relevant bits of HTTP that are important to keep in mind
