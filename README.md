@@ -178,3 +178,60 @@
     `npm run document`
   - Open generated documentation in your browser
     `firefox documentation/index.html`
+- [x] Development
+  - [x] Command line
+    - Open your terminal, get comfortable with issuing commands on it
+    - You will need to be comfortable with issuing `npm` and `git` commands in the terminal
+    - For `npm`, you will be using `npm run ___` commands quite a bit
+      - Apart from this, you may occasionally use `npm link` and `npm publish`
+      - Also, get familiar with the structure of a `package.json` file
+    - With `git`, there is a lot more surface area to familiarise yourself with
+      - Regular `git` commands such as `git clone`, `git checkout`, `git branch`, `git tag`, and `git merge`
+      - `git flow` commands (optional) - which are mostly useful to have when
+        your project becomes more complicated,
+        or when there are multiple developers who are collaborating
+  - [x] NodeJs, npm, nvm
+    - NodeJs allows you to run Javascript without a browser
+      - Most commonly used to write web servers (what we will be doing here),
+        and also to write tools to aid with both front-end and back-end development
+        (we have already used several of them so far)
+    - `npm` is a package repository for NodeJs
+      - Its primary purpose is to install and manage dependencies of your project
+      - It also does a few other neat things as well,
+        such as allowing you to define several build scripts
+    - `nvm` is a tool to help you manage multiple versions of NodeJs and `npm`
+      - It is the easiest way to install NodeJs and `npm`
+        without falling into the `sudo` trap
+      - It allows allows you to install multiple versions of the above,
+        and switch between them seamlessly.
+  - [x] Sublime text
+    - No nonsense text editor
+    - When you type, there is no perceptible lag before characters appear on the screen
+    - `Ctrl+P` to jump to any file
+    - `Ctrl+Click` on multiple locations to use multiple cursors
+    - Rich plug-in ecosystem -
+      you can get one for just about anything that you really need,
+      and more importantly, you can get rid of anything you you do not really need
+  - [x] HTTP anatomy
+    - Request + response pairs
+      - Send a request
+        - Verb
+        - Path
+        - Headers
+        - Body
+      - Receive a response
+        - Status code
+        - Headers
+        - Body
+    - Layered on top of TCP/IP
+      - A lower level networking protocol
+      - Used to ensure that packets and sent and received in order,
+        and that their transmission is lossless
+    - Stateless
+      - "State" is only held until the response is sent
+      - Request + response is a single transaction, nothing is held after that
+      - Keeping track of things for longer: cookies & tokens
+    - HTTP/2 is coming soon
+      - already in most browsers, but has not yet achieved widespread adoption
+      - Different from HTTP/1 in several fundamental ways
+      - We will be focussing on HTTP/1 for this course
