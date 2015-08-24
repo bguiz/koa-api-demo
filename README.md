@@ -289,3 +289,11 @@
       a visualisation to help you understand how Javascript's
       call stack/event loop/callback queue interact with each other.
     - [Understanding the Node.js Event Loop](https://nodesource.com/blog/understanding-the-nodejs-event-loop) - Trevor Norris
+  - Run the demo: `node demos/async-callbacks.js`
+    - Note that functions are hoisted,
+      which is why they can be used seemingly before they are declared
+    - Notice how the result (or error) is only printed **after** a while.
+    - This is not possible if the function was synchronous,
+      without completely hogging the CPU.
+    - Note that the callback function, `asyncUsingCallbackFunction`, itself
+      makes use of an in-built asynchronous callback function, `setTimeout`.
