@@ -255,3 +255,45 @@
     - Learnt about how NodeJs, `npm`, and `nvm` are used
     - Familiarised ourselves with Sublime Text as a text editor
     - Brushed up on the relevant bits of HTTP that are important to keep in mind
+- [x] Asynchronous Code: Callbacks -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.9)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.8...v0.0.9)
+  - While waiting for something to happen,
+    we should let the computer do other things in the mean time
+    - For example, when waiting for a file to be written to disk,
+      a program can simply ask to be notified when the disk I/O operations have completed,
+      and resume execution when this happen.
+  - The most basic way in which this is accomplished in Javascript is the
+    **callback function**
+  - Functions are first class objects in Javascript,
+    meaning that they can be passed around just any other object
+  - When you call function A, which needs to do something asynchronously,
+    you can have it take function B as one if its parameters,
+    and call function B when the code needs to continue
+  - An informal standard for these callbacks functions has emerged,
+    sometimes known as "errback" or "error-first callback",
+    where the first parameter of the callback function is `err` (the error),
+    and the second and subsequent parameters are whatever values
+    that are "returned" by initiating function
+    - This standard got popularised most notably in the APIs of the core NodeJs APIs
+  - Further reading - if you wish to explore the topic of callbacks,
+    and asynchronous Javascript in greater detail,
+    you must first understand the Javascript event loop
+    - This will delve into some implementation detail of the underlying
+      engine that interprets and executes Javascript,
+      (for NodeJs this would be V8, and the major browsers each have their own)
+      and in particular, its event loop.
+    - Here are some resources to deepen your knowledge in this area -
+      not required to continue with this course
+    - [Loupe](http://latentflip.com/loupe) -
+      a visualisation to help you understand how Javascript's
+      call stack/event loop/callback queue interact with each other.
+    - [Understanding the Node.js Event Loop](https://nodesource.com/blog/understanding-the-nodejs-event-loop) - Trevor Norris
+  - Run the demo: `node demos/async-callbacks.js`
+    - Note that functions are hoisted,
+      which is why they can be used seemingly before they are declared
+    - Notice how the result (or error) is only printed **after** a while.
+    - This is not possible if the function was synchronous,
+      without completely hogging the CPU.
+    - Note that the callback function, `asyncUsingCallbackFunction`, itself
+      makes use of an in-built asynchronous callback function, `setTimeout`.
