@@ -320,3 +320,36 @@
     - These combined made it far easier to write asynchronous code
   - If using ES6, you have promises available natively;
     however with ES5, you can take your pick from one of many Promise libraries
+  - Further reading:
+    - [MDN: Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  - Demo time:
+    - In order to run the demo, we will be making use of promises,
+      which are available natively in ECMAScript 6.
+      To enable this, we will need to use a newer version of NodeJs,
+      if you are not doing so already:
+      ```bash
+      nvm install iojs-3
+      nvm use iojs-3
+      ```
+    - Now you can run the demo: `node demos/async-promises.js`
+      - If you get an error similar to: `ReferenceError: Promise is not defined`,
+        double check that you have installed the required version of NodeJs properly
+    - In this demo, we have "chained" three functions that return a promise together,
+      such that each one of them returns a promise,
+      and its output is fed into the next function
+    - The callbacks demo has also been updated: `node demos/async-callbacks.js`
+    - Instead of just one callback, we now have three
+      - The invocation of the functions that use callbacks are nested within each other.
+        This is the "pyramid of doom" or "callback hell" that was mentioned earlier.
+      - We can see how this gets hairy so fast in such a simple and contrived example,
+        so imagine how bad it can get in a real world application
+        that is going to be inherently much more complex.
+      - The syntax for chaining promises is far more conducive for a developer
+        to reason about his/ her code,
+        than the syntax for nesting callbacks
+      - Furthermore, notice how the code that handles errors needs to be repeated
+        in the nested callbacks version,
+        but only needs to occur once in the chained promises version.
+    - As an exercise, create `fourthAsyncUsingCallbackFunction()` in the callbacks demo,
+      and `fourthAsyncUsingPromise()` in the promises demo,
+      and see which syntax you prefer to work with.
