@@ -297,3 +297,26 @@
       without completely hogging the CPU.
     - Note that the callback function, `asyncUsingCallbackFunction`, itself
       makes use of an in-built asynchronous callback function, `setTimeout`.
+- [ ] Asynchronous Code: Promises -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.10)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.9...v0.0.10)
+  - While it is possible to write virtually any sort of asynchronous code
+    using just callbacks, it is not necessarily going to be a pleasant experience.
+    - In a not-too-uncommon scenario where there are several asynchronous functions
+      which need to run consecutively,
+      you wind up with an anti-pattern known as "callback hell" or "pyramid of doom"
+      where there are callback functions nested within callback functions,
+      which are themselves nested within yet more callback functions
+    - Beyond a certain number of levels,
+      the tedium of keeping track of the different paths becomes too great,
+      and code quality begins to suffer
+    - To compound this problem further, consider the difficulty introduced
+      when handling errors within a deeply nested callback function
+  - Promises emerged as a means to solve this problem
+    - Allows you to write a sequence of asynchronous operations by chaining
+      methods that return promises using `.then(nextAsyncFunction)`
+    - Allows you to handle errors that occur anywhere in the chain of
+      asynchronous operations using `.catch(errorHandlerFunction)`
+    - These combined made it far easier to write asynchronous code
+  - If using ES6, you have promises available natively;
+    however with ES5, you can take your pick from one of many Promise libraries
