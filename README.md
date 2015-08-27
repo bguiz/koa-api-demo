@@ -353,7 +353,7 @@
     - As an exercise, create `fourthAsyncUsingCallbackFunction()` in the callbacks demo,
       and `fourthAsyncUsingPromise()` in the promises demo,
       and see which syntax you prefer to work with.
-- [ ] Asynchronous Code: Generators & yield -
+- [x] Asynchronous Code: Generators & yield -
   [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.11)
   [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.10...v0.0.11)
   - Promises are great, and they are an elegant upgrade from callbacks
@@ -369,3 +369,15 @@
     - We then `yield` regular functions which must return `yield`-able
       objects, and using `co`, these can be either promises or thunks.
       We shall take a look at both of these in the next section.
+  - This is very important to remember for the remainder of this course,
+    as `koa` makes extensive use of generator functions and the `yield` keyword
+  - Demo time
+    - Run the demo: `node demos/async-generators.js`
+    - In this demo we have syntax where we write a series of **asynchronous** code
+      in a manner such that it looks even more like writing **synchronous** code
+    - Being able to write code in this manner is one of the key motivations
+      for using them, and for using frameworks like `koa`
+    - Note that the functions continue to return promises,
+      as promises are `yield`-able
+    - If you have an existing code back that makes use of promises,
+      switching to this style is going to be relatively easy to refactor for.
