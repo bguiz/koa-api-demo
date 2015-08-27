@@ -297,7 +297,7 @@
       without completely hogging the CPU.
     - Note that the callback function, `asyncUsingCallbackFunction`, itself
       makes use of an in-built asynchronous callback function, `setTimeout`.
-- [ ] Asynchronous Code: Promises -
+- [x] Asynchronous Code: Promises -
   [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.10)
   [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.9...v0.0.10)
   - While it is possible to write virtually any sort of asynchronous code
@@ -353,3 +353,19 @@
     - As an exercise, create `fourthAsyncUsingCallbackFunction()` in the callbacks demo,
       and `fourthAsyncUsingPromise()` in the promises demo,
       and see which syntax you prefer to work with.
+- [ ] Asynchronous Code: Generators & yield -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.11)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.10...v0.0.11)
+  - Promises are great, and they are an elegant upgrade from callbacks
+  - However, generator functions and the `yield` keyword can be used together
+    as syntactic sugar to make writing asynchronous code run synchronously
+  - Using the latest NodeJs, generator functions and the `yield` keyword are
+    available out of the box.
+  - However, we need the help of a library to call the generator function
+    in such a way that we can use it for asynchronous purposes.
+    (More on this later, when we discuss `async` and `await` coming in ES7)
+  - We use the `co` library for this purpose
+    - We need to use `co` to wrap the generator function within
+    - We then `yield` regular functions which must return `yield`-able
+      objects, and using `co`, these can be either promises or thunks.
+      We shall take a look at both of these in the next section.
