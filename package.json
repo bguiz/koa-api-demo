@@ -33,12 +33,14 @@
     "co": "^4.6.0",
     "co-body": "^3.1.0",
     "co-monk": "^1.0.0",
+    "es6-promisify": "^3.0.0",
     "koa": "^0.21.0",
     "koa-router": "^5.1.2",
     "lodash.defaults": "^3.1.2",
     "lodash.omit": "^3.1.0",
     "mongodb": "^1.4.39",
-    "monk": "^1.0.1"
+    "monk": "^1.0.1",
+    "thunkify": "^2.1.2"
   },
   "devDependencies": {
     "babel": "^5.8.21",

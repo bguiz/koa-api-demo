@@ -381,7 +381,7 @@
       as promises are `yield`-able
     - If you have an existing code back that makes use of promises,
       switching to this style is going to be relatively easy to refactor for.
-- [ ] Asynchronous Code: Thunkify & promisify -
+- [x] Asynchronous Code: Thunkify & promisify -
   [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.12)
   [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.11...v0.0.12)
   - The basic unit of asynchronous code in Javascript are callback functions
@@ -402,3 +402,19 @@
     that turn "errback" functions into promises,
     and `thunkify` which turns "errback" functions into "thunks",
     which are also `yield`-able
+  - Demo time
+    - Install promisify and thunkify libraries: `npm install --save es6-promisify thunkify`
+    - Run `node demos/async-thunkify-promisify.js`
+    - We have three async functions implemented using callbacks
+      which are, in fact, identical to the ones used in `demos/async-callbacks.js`
+    - But we are invoking them from within a generator function wrapped using `co`,
+      wrapping them with either `thunkify` or `promisify` (it doesn't matter which),
+      and then `yield`-ing them
+    - That's a pretty easy and neat way to wrap up functions in any existing
+      libraries that make use of callbacks functions
+    - Recall earlier in our Hello World example server,
+      when writing the tests, we used a library called `supertest-as-promised`?
+    - Well this is really a library called `supertest` which makes use of callbacks,
+      wrapped using a technique similar to the ones that we have just done earlier,
+      such that it makes use of promises instead;
+      and therefore makes it `yield`-able
