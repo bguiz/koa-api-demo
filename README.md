@@ -418,7 +418,7 @@
       wrapped using a technique similar to the ones that we have just done earlier,
       such that it makes use of promises instead;
       and therefore makes it `yield`-able
-- [ ] Asynchronous Code: Async & await -
+- [x] Asynchronous Code: Async & await -
   [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.13)
   [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.12...v0.0.13)
   - (but not going to use this)
@@ -440,3 +440,16 @@
     the ES6 specifications have only just been finalised,
     and ES7 specifications are still very much changing;
     so here we will be using generator functions and the `yield` keyword
+  - Demo time
+    - ES7 is not here yet, but we can run `async` functions now thanks to `babel-node`
+    - Run `./node_modules/.bin/babel-node demos/async-await.js`
+    - We can still `promisify` errback functions,
+      however, we can no longer `thunkify`:
+      `await` only works on promises.
+    - Apart from no longer needing a `co` wrapper,
+      there is not much of a difference between the generator function form
+      and the `async` function form.
+    - The `async` function form is the most straight forward syntax amongst the
+      four forms for asynchronous functions that we have seen so far:
+      callbacks --> promises --> generator + `yield` --> `async` + `await`
+    - We will be using the generator + `yield` form.
