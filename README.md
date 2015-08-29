@@ -418,3 +418,38 @@
       wrapped using a technique similar to the ones that we have just done earlier,
       such that it makes use of promises instead;
       and therefore makes it `yield`-able
+- [x] Asynchronous Code: Async & await -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.13)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.12...v0.0.13)
+  - (but not going to use this)
+  - The original intent of generator functions and the `yield` keyword
+    was to enable lazy iterators and sequences,
+    which are very handy in functional programming,
+    and were a limiting factor in Javascript
+    - So using these to write asynchronous code is a hack that works well for now
+  - The `async` and `await` keywords are the *proper* way to do
+    asynchronous stuff, but write them synchronously
+      - When using generator functions nd the `yield` keyword,
+        we had to wrap the generator functions using the `co` library,
+        and we no longer need any sort of wrapper.
+      - Note that in `koa` we use generator functions without any wrappers.
+        This is because `koa` wraps functions passed into it using `co` under the hood.
+  - If using ES7, you have `async` and `await` natively;
+    however with ES6 and ES5, you can use `babel` to enable them
+  - As of the time of writing this,
+    the ES6 specifications have only just been finalised,
+    and ES7 specifications are still very much changing;
+    so here we will be using generator functions and the `yield` keyword
+  - Demo time
+    - ES7 is not here yet, but we can run `async` functions now thanks to `babel-node`
+    - Run `./node_modules/.bin/babel-node demos/async-await.js`
+    - We can still `promisify` errback functions,
+      however, we can no longer `thunkify`:
+      `await` only works on promises.
+    - Apart from no longer needing a `co` wrapper,
+      there is not much of a difference between the generator function form
+      and the `async` function form.
+    - The `async` function form is the most straight forward syntax amongst the
+      four forms for asynchronous functions that we have seen so far:
+      callbacks --> promises --> generator + `yield` --> `async` + `await`
+    - We will be using the generator + `yield` form.
