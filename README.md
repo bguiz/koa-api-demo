@@ -418,3 +418,25 @@
       wrapped using a technique similar to the ones that we have just done earlier,
       such that it makes use of promises instead;
       and therefore makes it `yield`-able
+- [ ] Asynchronous Code: Async & await -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.13)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.12...v0.0.13)
+  - (but not going to use this)
+  - The original intent of generator functions and the `yield` keyword
+    was to enable lazy iterators and sequences,
+    which are very handy in functional programming,
+    and were a limiting factor in Javascript
+    - So using these to write asynchronous code is a hack that works well for now
+  - The `async` and `await` keywords are the *proper* way to do
+    asynchronous stuff, but write them synchronously
+      - When using generator functions nd the `yield` keyword,
+        we had to wrap the generator functions using the `co` library,
+        and we no longer need any sort of wrapper.
+      - Note that in `koa` we use generator functions without any wrappers.
+        This is because `koa` wraps functions passed into it using `co` under the hood.
+  - If using ES7, you have `async` and `await` natively;
+    however with ES6 and ES5, you can use `babel` to enable them
+  - As of the time of writing this,
+    the ES6 specifications have only just been finalised,
+    and ES7 specifications are still very much changing;
+    so here we will be using generator functions and the `yield` keyword
