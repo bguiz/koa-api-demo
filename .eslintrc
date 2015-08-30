@@ -1,0 +1,10 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "semi": [2, "always"],
+    "comma-dangle": [1, "always"],
+  },
+}
