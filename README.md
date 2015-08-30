@@ -453,3 +453,23 @@
       four forms for asynchronous functions that we have seen so far:
       callbacks --> promises --> generator + `yield` --> `async` + `await`
     - We will be using the generator + `yield` form.
+- [x] Asynchronous Code: Recap -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.14)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.13...v0.0.14)
+  - We have review the four different ways in which we can code
+    Javascript asynchronously
+  - Because Javascript is single threaded, knowing how to write asynchronous code
+    is crucial
+  - Starting with callback functions,
+    available from the very first ever Javascript,
+    we then looked at promises,
+    then at generator functions plus `yield`,
+    and then finally at `async` functions plus `await.
+  - We have seen how it has gotten progressively easier
+    to write asynchronous code.
+    In essence, now we can write asynchronous code
+    using syntax that looks like you are writing synchronous code.
+  - This makes it so much easier to write,
+    reason about,
+  - It also makes it especially much easier to do error handling properly.
+  - The future of asynchronous Javascript is bright!
