@@ -473,3 +473,18 @@
     reason about,
   - It also makes it especially much easier to do error handling properly.
   - The future of asynchronous Javascript is bright!
+- [x] RESTful API -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.15)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.14...v0.0.15)
+  - REST is a software architecture style which guide us in how we design our APIs
+  - The term was coined by Roy Fielding in an academic thesis
+  - It has become a popular standard, and it is one whose principle we are going to follow
+  - In summary, it stipulates that APIs should be:
+    - Organised into resources
+    - The different operations on the APIs should be accomplished
+      using different HTTP verbs
+    - Each API should make known other resources that are related to it
+  - Resources
+    - [Representational state transfer](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+    - [The three levels of REST](http://martinfowler.com/articles/richardsonMaturityModel.html)
+    - [How I explained REST to my wife](http://www.looah.com/source/view/2284)
