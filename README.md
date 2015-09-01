@@ -476,7 +476,7 @@
 - [x] RESTful API -
   [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.15)
   [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.14...v0.0.15)
-  - REST is a software architecture style which guide us in how we design our APIs
+  - REST is a software architecture style which guides us in how we design our APIs
   - The term was coined by Roy Fielding in an academic thesis
   - It has become a popular standard, and it is one whose principle we are going to follow
   - In summary, it stipulates that APIs should be:
@@ -488,3 +488,21 @@
     - [Representational state transfer](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
     - [The three levels of REST](http://martinfowler.com/articles/richardsonMaturityModel.html)
     - [How I explained REST to my wife](http://www.looah.com/source/view/2284)
+- [x] JSON API -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.16)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.15...v0.0.16)
+  - REST is a great thing to have, but it lacks a concrete implementation
+  - Remember that REST originated in an academic paper
+  - At the time in which REST was coined, and became popular,
+    XML was the de-facto data exchange format on the web;
+    whereas right now it is JSON
+  - JSON API is merely a **concrete specification** of a RESTful API
+    that uses JSON as its data exchange format
+  - It also adds several features that are not part of the REST specification
+    but complement it rather nicely,
+    such as the ability to side-load resources
+  - Also noteworthy, is that it has been registered with IANA,
+    a standards body, and the specification has reach version 1.0
+  - Resources
+    - [JSON API format](http://jsonapi.org/format/)
+    - [IANA application/vnd.api+json](http://www.iana.org/assignments/media-types/application/vnd.api+json)
