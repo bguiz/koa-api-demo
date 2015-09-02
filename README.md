@@ -474,8 +474,8 @@
   - It also makes it especially much easier to do error handling properly.
   - The future of asynchronous Javascript is bright!
 - [x] RESTful API -
-  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.15)
-  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.14...v0.0.15)
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.1.1)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.1.0..v0.1.1)
   - REST is a software architecture style which guides us in how we design our APIs
   - The term was coined by Roy Fielding in an academic thesis
   - It has become a popular standard, and it is one whose principle we are going to follow
@@ -489,8 +489,8 @@
     - [The three levels of REST](http://martinfowler.com/articles/richardsonMaturityModel.html)
     - [How I explained REST to my wife](http://www.looah.com/source/view/2284)
 - [x] JSON API -
-  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.16)
-  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.15...v0.0.16)
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.1.2)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.1.1...v0.1.2)
   - REST is a great thing to have, but it lacks a concrete implementation
   - Remember that REST originated in an academic paper
   - At the time in which REST was coined, and became popular,
@@ -506,9 +506,9 @@
   - Resources
     - [JSON API format](http://jsonapi.org/format/)
     - [IANA application/vnd.api+json](http://www.iana.org/assignments/media-types/application/vnd.api+json)
-- [ ] MongoDb and Monk -
-  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.17)
-  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.16...v0.0.17)
+- [x] MongoDb and Monk -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.1.3)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.1.2...v0.1.3)
   - MongoDb is a document database
     - Its query syntax is very easy to pick up for Javascript developers
   - `monk` is a wrapper around MongoDb
