@@ -520,3 +520,33 @@
     - [MongoDb](https://www.mongodb.org/)
     - [monk](https://github.com/Automattic/monk)
     - [co-monk](https://github.com/tj/co-monk)
+  - Code time
+    - Create a file `lib/db.js`
+    - `monk('localhost/koa-api-demo')`: connects to a MongoDb database
+      that is running on the same computer,
+      and creates or uses an existing one named `koa-api-demo`
+    - `coMonk(db.get(entityName))`: let us break this down:
+      - `db.get(entityName)`: `db` is an instance of `monk`,
+        and we are obtaining a table named the value of `entityName` here
+      - `coMonk(...)`: we are wrapping the `monk` table obtained earlier
+        using the `co-monk` library to make its methods `yield`-able
+    - Now we introduce some new syntax from ES6:
+      ```javascript
+      module.exports = {
+        db,
+        getEntityTable,
+      };
+      ```
+      This is exactly the same as the following in ES5 -
+      we simply save on some repetitive typing.
+      ```javascript
+      module.exports = {
+        db: db,
+        getEntityTable: getEntityTable,
+      };
+      ```
+  - To wrap up
+    - We have created a very simple module
+      that enables us to access a MongoDb database
+    - We have not yet done anything with the database,
+      and that is coming soon.
