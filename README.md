@@ -506,3 +506,17 @@
   - Resources
     - [JSON API format](http://jsonapi.org/format/)
     - [IANA application/vnd.api+json](http://www.iana.org/assignments/media-types/application/vnd.api+json)
+- [ ] MongoDb and Monk -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.0.17)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.0.16...v0.0.17)
+  - MongoDb is a document database
+    - Its query syntax is very easy to pick up for Javascript developers
+  - `monk` is a wrapper around MongoDb
+    - It is a very minimal wrapper
+    - The main reason that we use it is that we want to be able to
+      `yield` database queries within generator functions.
+      Using another library, `co-monk`, we get precisely this
+  - Resources
+    - [MongoDb](https://www.mongodb.org/)
+    - [monk](https://github.com/Automattic/monk)
+    - [co-monk](https://github.com/tj/co-monk)
