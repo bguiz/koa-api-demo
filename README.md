@@ -473,3 +473,111 @@
     reason about,
   - It also makes it especially much easier to do error handling properly.
   - The future of asynchronous Javascript is bright!
+- [x] RESTful API -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.1.1)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.1.0..v0.1.1)
+  - REST is a software architecture style which guides us in how we design our APIs
+  - The term was coined by Roy Fielding in an academic thesis
+  - It has become a popular standard, and it is one whose principle we are going to follow
+  - In summary, it stipulates that APIs should be:
+    - Organised into resources
+    - The different operations on the APIs should be accomplished
+      using different HTTP verbs
+    - Each API should make known other resources that are related to it
+  - Resources
+    - [Representational state transfer](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+    - [The three levels of REST](http://martinfowler.com/articles/richardsonMaturityModel.html)
+    - [How I explained REST to my wife](http://www.looah.com/source/view/2284)
+- [x] JSON API -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.1.2)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.1.1...v0.1.2)
+  - REST is a great thing to have, but it lacks a concrete implementation
+  - Remember that REST originated in an academic paper
+  - At the time in which REST was coined, and became popular,
+    XML was the de-facto data exchange format on the web;
+    whereas right now it is JSON
+  - JSON API is merely a **concrete specification** of a RESTful API
+    that uses JSON as its data exchange format
+  - It also adds several features that are not part of the REST specification
+    but complement it rather nicely,
+    such as the ability to side-load resources
+  - Also noteworthy, is that it has been registered with IANA,
+    a standards body, and the specification has reach version 1.0
+  - Resources
+    - [JSON API format](http://jsonapi.org/format/)
+    - [IANA application/vnd.api+json](http://www.iana.org/assignments/media-types/application/vnd.api+json)
+- [x] MongoDb and Monk -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.1.3)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.1.2...v0.1.3)
+  - MongoDb is a document database
+    - Its query syntax is very easy to pick up for Javascript developers
+  - `monk` is a wrapper around MongoDb
+    - It is a very minimal wrapper
+    - The main reason that we use it is that we want to be able to
+      `yield` database queries within generator functions.
+      Using another library, `co-monk`, we get precisely this
+  - Resources
+    - [MongoDb](https://www.mongodb.org/)
+    - [monk](https://github.com/Automattic/monk)
+    - [co-monk](https://github.com/tj/co-monk)
+  - Code time
+    - Create a file `lib/db.js`
+    - `monk('localhost/koa-api-demo')`: connects to a MongoDb database
+      that is running on the same computer,
+      and creates or uses an existing one named `koa-api-demo`
+    - `coMonk(db.get(entityName))`: let us break this down:
+      - `db.get(entityName)`: `db` is an instance of `monk`,
+        and we are obtaining a table named the value of `entityName` here
+      - `coMonk(...)`: we are wrapping the `monk` table obtained earlier
+        using the `co-monk` library to make its methods `yield`-able
+    - Now we introduce some new syntax from ES6:
+      ```javascript
+      module.exports = {
+        db,
+        getEntityTable,
+      };
+      ```
+      This is exactly the same as the following in ES5 -
+      we simply save on some repetitive typing.
+      ```javascript
+      module.exports = {
+        db: db,
+        getEntityTable: getEntityTable,
+      };
+      ```
+  - To wrap up
+    - We have created a very simple module
+      that enables us to access a MongoDb database
+    - We have not yet done anything with the database,
+      and that is coming soon.
+- [x] Behaviour driven development -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.1.4)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.1.3...v0.1.4)
+  - Before continuing with the next part of the development,
+    let us be deliberate about the methodology with which we shall be
+    approaching development going forward.
+  - We will be using behaviour driven development - BDD
+  - In a nutshell, it means that one defines the behaviour of the application
+    prior to implementing these behaviours
+  - In more concrete terms, this is simply to write the tests first,
+    have the tests fail,
+    then next implement the functions,
+    and have the tests pass.
+  - One point of importance is that
+    the tests that we write are not focussed on being tests,
+    rather, they are focussed on describing the behaviour of the application;
+      - these descriptions, however, are not prose,
+        they are executable test cases,
+        and thus tests must be written using a library that supports a BDD syntax
+      - This is why we will be using `mocha` and `supertest`
+  - We have already done this when implementing the "hello world" API
+    much earlier on
+  - The main benefits of the BDD approach, IMHO, are that
+    - The test coverage does not tend to "lag" behind development of new features,
+      compared to other approaches
+    - Development is always being done against a spec
+    - In the context of developing an API,
+      we don't need to develop a front end in order to make sure our back end works
+  - Resources
+    - [Introducing BDD](http://dannorth.net/introducing-bdd/)
+    - [BDD wiki](http://behaviourdriven.org/Introduction)
