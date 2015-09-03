@@ -550,3 +550,34 @@
       that enables us to access a MongoDb database
     - We have not yet done anything with the database,
       and that is coming soon.
+- [x] Behaviour driven development -
+  [tag](https://github.com/bguiz/koa-api-demo/tree/v0.1.4)
+  [diff](https://github.com/bguiz/koa-api-demo/compare/v0.1.3...v0.1.4)
+  - Before continuing with the next part of the development,
+    let us be deliberate about the methodology with which we shall be
+    approaching development going forward.
+  - We will be using behaviour driven development - BDD
+  - In a nutshell, it means that one defines the behaviour of the application
+    prior to implementing these behaviours
+  - In more concrete terms, this is simply to write the tests first,
+    have the tests fail,
+    then next implement the functions,
+    and have the tests pass.
+  - One point of importance is that
+    the tests that we write are not focussed on being tests,
+    rather, they are focussed on describing the behaviour of the application;
+      - these descriptions, however, are not prose,
+        they are executable test cases,
+        and thus tests must be written using a library that supports a BDD syntax
+      - This is why we will be using `mocha` and `supertest`
+  - We have already done this when implementing the "hello world" API
+    much earlier on
+  - The main benefits of the BDD approach, IMHO, are that
+    - The test coverage does not tend to "lag" behind development of new features,
+      compared to other approaches
+    - Development is always being done against a spec
+    - In the context of developing an API,
+      we don't need to develop a front end in order to make sure our back end works
+  - Resources
+    - [Introducing BDD](http://dannorth.net/introducing-bdd/)
+    - [BDD wiki](http://behaviourdriven.org/Introduction)
